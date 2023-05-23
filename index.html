@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bulingbuling</title>
+    <style>
+        html {
+            min-height: 100%;
+            background: #172f38;
+            color: #d7dbdd;
+            margin: 0;
+            padding: 20px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container span {
+            float: left;
+            min-width: 2em;
+            margin-right: 10px;
+        }
+
+        .center {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            font-size: 8em;
+            color: rgba(255, 255, 255, .7);
+            transform: translate(-50%, -50%);
+            /* 针对opactiy，变化函数使用ease-in，延迟0.3s变化，变化时在0.7s完成
+               针对其他css属性，变化函数使用ease-in，变化总时间1s
+             */
+            transition: all 1s ease-in, opacity 0.7s ease-in 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="divContainer" class="container">
+    </div>
+    <div id="divCenter" class="center">
+    </div>
+
+    <script src="main.js"></script>
+    <!-- <script>
+        (()=>{"use strict";const t=["#f26395","#62efab","#ef7658","#ffe868","#80e3f7","#d781f9"];function e(t,e){return Math.floor(Math.random()*(e-t)+t)}let n=document.getElementById("divContainer"),r=document.getElementById("divCenter"),i=new class{constructor(t=500){this.duration=t,this.number=1,this.onCreatedNumber=null,this.timeId=null}start(){this.timeId||(this.timeId=setInterval((()=>{this.onCreatedNumber&&this.onCreatedNumber(this.number,function(t){if(t<2)return!1;for(let e=2;e<=t-1;e++)if(t%e==0)return!1;return!0}(this.number)),this.number++}),this.duration))}stop(){clearInterval(this.timeId),this.timeId=null}}(100);i.onCreatedNumber=function(i,o){let l=function(){let n=e(0,t.length);return t[n]}();!function(t,e,r){let i=document.createElement("span");n.appendChild(i),i.innerText=t,e&&(i.style.color=r)}(i,o,l),function(t,n,i){if(r.innerText=t,n){let n=document.createElement("div");n.className="center",n.innerText=t,n.style.color=i,document.body.appendChild(n),getComputedStyle(n).width,n.style.transform=`translate(${e(-500,500)}px, ${e(-500,500)}px)`,n.style.opacity=0}}(i,o,l)};const o=i;let l=!1;window.onclick=()=>{l?(o.stop(),l=!1):(o.start(),l=!0)}})();
+    </script> -->
+</body>
+
+</html>
